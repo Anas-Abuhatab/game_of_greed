@@ -9,8 +9,11 @@ a = {"1":{"1":100,"2":200,"3":1000,"4":2000,"5":3000,"6":4000},
 "6":{"1":0,"2":0,"3":600,"4":1200,"5":1800,"6":2400}
 }
 class GameLogic :
-    def __init__(self) :
-        pass
+
+    def __init__(self,dice_num=6):
+        
+        self.dice_num=dice_num
+    
     @staticmethod
     def calculate_score(dice):
         score=0
@@ -29,6 +32,21 @@ class GameLogic :
                 score += a[str(i[0])][str(i[1])]
         print(score)               
         return score
+
+    @staticmethod    
+    def roll_dice(dice_num):
+        """
+        this function will take random number in range 0-6 time and return them in tuple
+        
+        """
+        newArr=[]
+       
+        for i in range(dice_num):
+            randomNum=random.randint(1,6)
+            newArr.append(randomNum)
+            
+        return tuple(newArr)
+        
 GameLogic.calculate_score((1,1,1,2,3,3))
 
 
