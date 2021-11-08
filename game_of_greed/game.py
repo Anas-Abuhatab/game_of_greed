@@ -8,10 +8,7 @@ class Game:
         self.roller=roller
         self.round_num=0
         self.banker=Banker()
-        
-        
-        
-        
+          
 
     def play(self):
         
@@ -37,7 +34,7 @@ class Game:
                     if dice_key=="q":
                         if self.banker.balance:
                             print(f'Total score is {self.banker.balance} points')
-                            
+
                         print(f'Thanks for playing. You earned {self.banker.balance} points')
                         flage=False
                         break
@@ -48,7 +45,15 @@ class Game:
                         self.banker.bank()
                         print(f'Total score is {self.banker.balance} points')
                         break
-                        
+
+                    elif dice_key=='r':
+                        print('Rolling 6 dice...')
+                        roll_dice=self.roller(6)
+                        numbers = [ str(x) for x in roll_dice]
+                        print(','.join(numbers))
+                        dice_key=input('Enter dice to keep (no spaces), or (q)uit: ')
+
+
 
                     else:
                         unbank_point=GameLogic.calculate_score(dice_key)
