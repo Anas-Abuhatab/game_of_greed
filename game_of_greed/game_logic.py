@@ -18,9 +18,9 @@ class GameLogic :
     def calculate_score(dice):
         score=0
         counter = Counter(dice)
-        print(counter)
+        # print(counter)
         cont = counter.most_common()
-        print(cont)
+        # print(cont)
         if len(cont) == 6:
            score = 1500
 
@@ -30,7 +30,7 @@ class GameLogic :
         else:   
             for i in cont:              
                 score += a[str(i[0])][str(i[1])]
-        print(score)               
+        # print(score)               
         return score
 
     @staticmethod    
