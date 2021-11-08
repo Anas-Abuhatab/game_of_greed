@@ -12,4 +12,5 @@
 
 
 ## PR Link 
-[PR Link](https://github.com/Anas-Abuhatab/game_of_greed/pull/3)
+[PR Link 1](https://github.com/Anas-Abuhatab/game_of_greed/pull/3)
+[PR Link 2](https://github.com/Anas-Abuhatab/game_of_greed/pull/6)
