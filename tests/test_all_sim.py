@@ -14,3 +14,11 @@ def test_bank_one_quit():
 def test_bank_first_Two_rounds():
     Flo.test('tests/flow/bank_first_for_two_rounds.sim.txt')
 
+def test_bank_cheater():
+    Flo.test('tests/flow/cheat_and_fix.sim.txt')
+    
+def test_bank_hot_dice():
+    Flo.test('tests/flow/hot_dice.txt')
+
+def test_bank_zilch():
+    Flo.test('tests/flow/zilch.sim.txt')

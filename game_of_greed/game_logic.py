@@ -18,9 +18,7 @@ class GameLogic :
     def calculate_score(dice):
         score=0
         counter = Counter(dice)
-        # print(counter)
         cont = counter.most_common()
-        # print(cont)
         if len(cont) == 6:
            score = 1500
 
@@ -46,8 +44,7 @@ class GameLogic :
             newArr.append(randomNum)
             
         return tuple(newArr)
-        
-GameLogic.calculate_score((1,1,1,2,3,3))
+
 
 
 
