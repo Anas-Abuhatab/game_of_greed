@@ -44,8 +44,7 @@ class GameLogic :
             newArr.append(randomNum)
             
         return tuple(newArr)
-        
-GameLogic.calculate_score((4,6,5,2,2))
+
 
 
 

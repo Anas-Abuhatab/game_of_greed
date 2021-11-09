@@ -30,10 +30,11 @@ class Game:
                 roll_dice = ','.join(numbers)
                 print(roll_dice)
                 if GameLogic.calculate_score(numbers)==0:
-                    num_dice=0
+                    # num_dice=0
                     print("Zilch!!! Round over")
                     print(f"You banked 0 points in round {self.round_num}")
                     print(f'Total score is {self.banker.balance} points')
+                    continue
                 else:
                     dice_key=input('Enter dice to keep (no spaces), or (q)uit: ')
                 
@@ -57,9 +58,17 @@ class Game:
                     elif dice_key=='r':
                         print(f'Rolling {num_dice} dice...')
                         roll_dice=self.roller(num_dice)
-                        roll_dice = ','.join([ str(x) for x in roll_dice])
+                        numbers = [ str(x) for x in roll_dice]
+                        roll_dice = ','.join(numbers)
                         print(roll_dice)
-                        dice_key=input('Enter dice to keep (no spaces), or (q)uit: ')
+                        ddd = GameLogic.calculate_score(numbers)
+                        if ddd == 0:
+                            print("Zilch!!! Round over")
+                            print(f"You banked 0 points in round {self.round_num}")
+                            print(f'Total score is {self.banker.balance} points')
+                            break
+                        else:
+                            dice_key=input('Enter dice to keep (no spaces), or (q)uit: ')
 
 
 
@@ -84,11 +93,13 @@ class Game:
                             shelf_point=self.banker.shelf(unbank_point)
                             num_dice-=len(dice_key)
                             print(f'You have {shelf_point} unbanked points and {num_dice} dice remaining')
+                            # if num_dice>0:
                             dice_key=input('(r)oll again, (b)ank your points or (q)uit ')
                             
                             if list(counter_input.values()) == [2,2,2]:
                                 num_dice = 6
 
+    # def zilch():
 
 
             
