@@ -1,6 +1,6 @@
 # team members 
 
-1. salsabil mislat 
+1. Salsabil mislat 
 
 2. Ibrahim Bader 
 
